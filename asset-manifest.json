@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/board-game-app/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/board-game-app/static/js/main.77c3c22e.chunk.js",
+    "main.js.map": "/board-game-app/static/js/main.77c3c22e.chunk.js.map",
+    "runtime-main.js": "/board-game-app/static/js/runtime-main.2415d12b.js",
+    "runtime-main.js.map": "/board-game-app/static/js/runtime-main.2415d12b.js.map",
+    "static/js/2.370390e7.chunk.js": "/board-game-app/static/js/2.370390e7.chunk.js",
+    "static/js/2.370390e7.chunk.js.map": "/board-game-app/static/js/2.370390e7.chunk.js.map",
+    "static/js/3.7b137a3d.chunk.js": "/board-game-app/static/js/3.7b137a3d.chunk.js",
+    "static/js/3.7b137a3d.chunk.js.map": "/board-game-app/static/js/3.7b137a3d.chunk.js.map",
+    "index.html": "/board-game-app/index.html",
+    "service-worker.js": "/board-game-app/service-worker.js",
+    "service-worker.js.map": "/board-game-app/service-worker.js.map",
+    "static/css/main.8c8b27cf.chunk.css.map": "/board-game-app/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.370390e7.chunk.js.LICENSE.txt": "/board-game-app/static/js/2.370390e7.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/board-game-app/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2415d12b.js",
+    "static/js/2.370390e7.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.77c3c22e.chunk.js"
+  ]
+}
