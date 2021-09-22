@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  mode:'spa',
+  mode: "spa",
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -50,6 +50,20 @@ export default {
     },
   },
 
+  manifest: {
+    name: "ito",
+    title: "ito",
+    "og:title": "ito",
+    description: "ito",
+    "og:description": "itoアプリ",
+    lang: "ja",
+    theme_color: "#529b58",
+    background_color: "#e98d2c",
+    display: "standalone",
+    scope: "/",
+    start_url: "/",
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
@@ -76,6 +90,14 @@ export default {
         },
       },
     },
+  },
+
+  router: {
+    base: "/board-game-app/",
+  },
+
+  generate: {
+    dir: "docs",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
