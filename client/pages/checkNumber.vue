@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center">
+    <v-row v-if="!hidden" justify="center" align="center">
       <v-col cols="12" align="center">
         プレイヤー{{ currentPlayer + 1 }}
         <br />
@@ -8,15 +8,29 @@
       </v-col>
       <v-col cols="12" align="center">
         <p v-for="num of cardNum" :key="num" class="display-2 secondary--text">
-          {{ randoms[currentPlayer*2 + num-1 ] }}
+          {{ randoms[currentPlayer*cardNum + num-1 ] }}
         </p>
-        書き終わったら次の人に渡してください。
       </v-col>
       <v-col cols="12" align="center">
-        <v-btn dark color="orange accent-4" @click="currentPlayer < playerNum - 1 ? currentPlayer++ : $router.push('selectQuestion')">
+        <v-btn dark color="orange accent-4" @click="currentPlayer < playerNum - 1 ? nextPlayer() : $router.push('selectQuestion')">
           {{ currentPlayer < playerNum - 1 ? "NEXT PLAYER" : "NEXT SETTING" }}
         </v-btn>
       </v-col>
+    </v-row>
+    <v-row v-else>
+      <v-col cols="12" align="center">
+        プレイヤー{{ currentPlayer + 1 }}
+        <br />
+        番号を確認します。
+        CHECK NUMBER を押してください
+        <v-col cols="12" align="center">
+          <v-btn dark color="orange accent-4" @click="hidden = false">
+            {{ "CHECK NUMBER" }}
+          </v-btn>
+        </v-col>
+      </v-col>
+    </v-row>
+    <v-row justify="center" align="center" class="mt-12">
       <v-btn dark color="grey" @click="$router.push('/')">
         BACK
       </v-btn>
@@ -32,6 +46,7 @@ export default{
         return{
             randoms:[],
             currentPlayer:0,
+            hidden: false,
         }
     },
     computed:{
@@ -46,6 +61,7 @@ export default{
             const _min = 0
 
             const _totalChoiceNum = this.playerNum * this.cardNum
+            console.log("_totalChoiceNum - ", _totalChoiceNum)
 
             for(let i = 0; i < _totalChoiceNum; i++){
                 while(true){
@@ -57,8 +73,12 @@ export default{
                 }
             }
 
-            console.log(this.rondoms)
+            console.log(this.randoms)
 
+        },
+        nextPlayer(){
+            this.currentPlayer++
+            this.hidden = true
         }
     }
 }
